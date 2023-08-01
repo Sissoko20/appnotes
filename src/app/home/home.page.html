@@ -1,20 +1,56 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-toolbar color="primary" *ngIf="connected">
+    <ion-buttons slot="end">
+      <ion-fab-button>
+        <ion-icon name="exit" (click)="logout()"></ion-icon>
+       
+      </ion-fab-button>
+       
+    </ion-buttons>
+    <ion-item color="primary">
+      <ion-label>Welcome Mali Developers</ion-label>
+      <ion-label>{{email}}</ion-label>
+    </ion-item>
+    
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+
+  <div class="ucted">
+    
+  
+    <h1>Enregistrez vos idées</h1>
+    <ion-item>
+      <ion-label>Nom</ion-label>
+      <ion-input type="text" [(ngModel)]="datastore.text" placeholder="Ajouter un titre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Image</ion-label>
+      <ion-input type="text" [(ngModel)]="datastore.img" placeholder="Ajouter une image via url"></ion-input>
+ <ion-tab-button tab="home">
+  <ion-icon name="add"></ion-icon>
+  <ion-button (click)="save()" expand="block" fill="clear" shape="round">
+    save
+  </ion-button>
+ </ion-tab-button>
+    </ion-item>
+    <ion-card *ngFor="let data of collection |async">
+      <img [src]="data.img">
+      <ion-item lines="none">
+        <ion-label>{{ data.text }}</ion-label>
+        
+      </ion-item>
+    </ion-card>
+
+ 
+      
+   
   </div>
+
+  
 </ion-content>
+

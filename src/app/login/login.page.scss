@@ -1,0 +1,41 @@
+.flexheader{
+    display: flex;
+    justify-content: center;
+    
+ 
+ }
+ .title{
+     display: flex;
+     
+ }
+ .avatar{
+     display: flex;
+     
+ 
+ }
+ .title ion-title{
+     font-size: 2em;
+     font-style: italic;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+ .text{
+     display: flex;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-size: 2em;
+     justify-content: center;
+ 
+ }
+ .btnsubscribe{
+     display: flex;
+     justify-content: center;
+     
+    
+ 
+ }
+ 
+ ion-slides {
+     height: 100%;
+     --bullet-background-active: #fff;
+     --bullet-background: #000;
+ }
+ 

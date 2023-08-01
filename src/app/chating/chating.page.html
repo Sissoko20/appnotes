@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary">
+ 
+    <ion-title>chating</ion-title>
+    <ion-title *ngIf="connected">
+      {{email}}
+     </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+
+  <div *ngIf="connected">
+
+    
+    <ion-item lines="none" *ngFor="let msg of message"> 
+      
+      <ion-badge text-wrap *ngIf="msg.userId === userId" slot="end" color="success" mode="ios">
+
+        {{msg.text}}
+        </ion-badge>
+
+        <ion-badge text-wrap *ngIf="msg.userId !== userId" slot="start" color="secondary" mode="ios">
+
+          {{msg.text}}
+          </ion-badge>
+
+        
+    </ion-item>
+    
+
+      
+    
+  </div>
+  
+ </ion-content>
+<ion-footer *ngIf="connected">
+  
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="10">
+      <ion-input [(ngModel)]="messageText" type="text" placeholder="Ecrivez votre texte"></ion-input>
+      </ion-col>
+      <ion-col size="2">
+
+    <ion-tab-button tab="chating">
+      <ion-icon name="send" (click)="sendmessage()"></ion-icon>
+     
+    </ion-tab-button> 
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

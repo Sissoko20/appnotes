@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "878534650818",
+    "firebase_url": "https://testfire-209fd-default-rtdb.firebaseio.com",
+    "project_id": "testfire-209fd",
+    "storage_bucket": "testfire-209fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878534650818:android:5b71594abe23dabdc9c45b",
+        "android_client_info": {
+          "package_name": "com.sissokoit.appnotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "878534650818-he4m82ns6cs4ojb97j8o8lv7oqurtfhu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAf8oG5KKoVvAFzSFTojVsCcK_2Memrp-M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "878534650818-he4m82ns6cs4ojb97j8o8lv7oqurtfhu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "878534650818-2cbft3dklvqacetf7kbsk9tb0nsrkub7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "testfireapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
